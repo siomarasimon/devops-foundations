@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Labs - Devops Foundations Devops.gt</title>
+  <title>IAC Configuration Management Ansible - Devops Foundations Devops.gt</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Labs";
-    var mkdocs_page_input_path = "Infrastructure-as-Code/labs.md";
+    var mkdocs_page_name = "IAC Configuration Management Ansible";
+    var mkdocs_page_input_path = "Infrastructure-as-Code/04-ansible-playbook.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -57,15 +57,9 @@
 		
     <span class="caption-text">Infrastructure-as-Code</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Labs</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#laboratorios-de-este-modulo">Laboratorios de este modulo</a></li>
-    
-
-    </ul>
+    <a class="" href="../labs/">Labs</a>
                 </li>
     </ul>
 	    </li>
@@ -101,12 +95,8 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
-        
-          <li>Infrastructure-as-Code &raquo;</li>
-        
-      
     
-    <li>Labs</li>
+    <li>IAC Configuration Management Ansible</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -116,26 +106,33 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="laboratorios-de-este-modulo">Laboratorios de este modulo</h1>
+                <h1 id="iac-configuration-management-ansible">IAC Configuration Management Ansible</h1>
+<h2 id="prerrequisitos">Prerrequisitos</h2>
+<p>Para realizar este laboratorio usted necesita:</p>
 <ul>
-<li><a href="../01-cvs-git/">CVS-Github Basico</a></li>
-<li><a href="../02-terraform/">Terraform-AWS</a></li>
-<li><a href="../03-terraform-bootstrap/">Terraform-AW-Bootstrap</a></li>
-<li><a href="../04-ansible-playbook/">Ansible Configuration Management</a></li>
+<li>Conocimiento de utilizacion de git si no lo tiene verifique el laboratorio <a href="../01-cvs-git/">cvs-git</a></li>
+<li>Workstation <a href="../Conectarse-ssh/">conectarse ssh</a></li>
+<li>Ultima version del codigo de laboratorio <a href="../actualizar-codigo-fork/">actualizar codigo</a></li>
+<li>EL servidor creado en el laboratorio anterior <a href="../03-terraform-bootstrap/">terraform iac 2</a></li>
 </ul>
+<h2 id="objetivo">Objetivo</h2>
+<p>El objetivo de este laboratorio es utilizar un configuration management como ansible para realizar tareas dentro de un servidor</p>
+<h2 id="uso-de-ansible">Uso de Ansible</h2>
+<h3 id="connecion-al-servidor">Connecion al servidor</h3>
+<ul>
+<li>Ingrese en a la workstation usando el usuario ec2-user </li>
+<li>Conectese a la instancia creada en el ejercicio anterior consulte el IP al instructor <code>ssh -i "demo.pem" ec2-user@&lt;IP&gt;</code></li>
+<li>Clone el repositorio corriendo el comando <code>git clone https://github.com/DouglasLopez/devops-foundations.git</code></li>
+<li>Cambie al directorio del ejercicio 3 corriendo <code>cd devops-foundations/source/infrastructure-as-code/ansible3/</code></li>
+<li>Verifique que ansible esta instalado y funcionando corriendo <code>ansible --version</code></li>
+<li>Corra el playbook de ansible con el comando ansible-playbook <code>ansible-playbook ansible-playbook.yml</code></li>
+<li>Verifique la instalacion de docker corriendo el comando <code>docker --version</code> y <code>docker ps</code></li>
+</ul>
+<script id="asciicast-0OQDdPgSqtn8B5k1dI0N3y0RH" src="https://asciinema.org/a/0OQDdPgSqtn8B5k1dI0N3y0RH.js" async></script>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../Conectarse-ssh/" class="btn btn-neutral float-right" title="Connecion SSH">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -159,10 +156,6 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../Conectarse-ssh/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
